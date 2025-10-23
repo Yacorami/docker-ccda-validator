@@ -1,34 +1,24 @@
 # docker-ccda-validator
 
-CCDA Validator in a docker container
+CCDA Validator in a docker container (Supports up to USCDI V3)
 
 ## What You'll need
 
 1. Docker
 
-## Development Usage
+##  Usage
 
-git clone this repo (and submodules! VERY important!)
 ```
-git clone --recurse-submodules https://github.com/mieweb/docker-ccda-validator.git
+git clone https://github.com/Yacorami/docker-ccda-validator.git uscdiv3-validator
 ```
-
-Build the docker
 ```
-cd docker-ccda-validator
+cd uscdiv3-validator
+```
+```
 docker build -t docker-ccda-validator .
 ```
-
-Run the docker
 ```
-docker run -dp 8080:8080 docker-ccda-validator
+docker run -dp 8088:8080 docker-ccda-validator
 ```
 
-Wait...
-Try opening up any of the following URLS:
-
-http://SERVER_IP:8080/referenceccdaservice/static/validationui.html
-![validationui](https://i.imgur.com/DM3E6ny.png)
-
-http://SERVER_IP:8080/referenceccdaservice/swagger-ui.html#/reference-ccda-validation-controller
-![swagger-ui](https://i.imgur.com/1OdtDyg.png)
+Go to : http://localhost:8088/referenceccdaservice/static/validationui.html
