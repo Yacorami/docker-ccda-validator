@@ -7,8 +7,6 @@ RUN yum update -y
 ADD "./webapps" "/var/lib/tomcat/webapps"
 ADD "./conf" "/etc/tomcat"
 ADD "./log" "/var/log/tomcat"
-ADD "./submodules/reference-ccda-validator" "/etc/submodules/reference-ccda-validator"
-ADD "./submodules/code-validator-api" "/etc/submodules/code-validator-api"
 ADD "./files" "/etc/ccda/files"
 
 # Do the magic
